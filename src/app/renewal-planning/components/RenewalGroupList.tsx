@@ -159,9 +159,9 @@ export default function RenewalGroupList() {
             return (
               <div key={`group-${group.type}`} className="fade-in">
                 {/* Group Header */}
-                <button
+                <div
                   onClick={() => toggleGroup(group.type)}
-                  className="w-full flex items-center gap-3 px-5 py-3.5 hover:bg-muted/30 transition-colors text-left group"
+                  className="w-full flex items-center gap-3 px-5 py-3.5 hover:bg-muted/30 transition-colors text-left group cursor-pointer"
                 >
                   <div className={`p-1 rounded transition-transform duration-200 ${isOpen ? 'rotate-0' : '-rotate-90'}`}>
                     <ChevronDown size={14} className="text-muted-foreground" />
@@ -194,7 +194,7 @@ export default function RenewalGroupList() {
                       Créer session
                     </button>
                   </div>
-                </button>
+                </div>
 
                 {/* Group Items */}
                 {isOpen && (
